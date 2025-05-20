@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>İsmail Samurkaş - CV</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #34495e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+        
+        header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent), var(--secondary));
+        }
+
+        .profile {
+            display: flex;
+            margin: 30px;
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .profile-image {
+            width: 200px;
+            margin-right: 0;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-right: 3px solid var(--primary);
+        }
+
+        .contact-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 60px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+
+        .section {
+            margin: 30px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .two-column {
+            display: flex;
+            gap: 20px;
+            margin: 30px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            background-color: var(--light);
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        li:hover {
+            border-left: 3px solid var(--accent);
+            transform: translateX(5px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 8px 0;
+        }
+
+        .contact-item strong {
+            min-width: 100px;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .contact-item strong:after {
+            content: ':';
+            position: absolute;
+            right: 10px;
+        }
+        
+        .contact-item span {
+            padding-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+            }
+
+            .profile-image {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .profile-image img {
+                max-height: 300px;
+                object-fit: cover;
+                border-right: none;
+                border-bottom: 3px solid var(--primary);
+            }
+
+            .two-column {
+                flex-direction: column;
+            }
+
+            .container {
+                margin: 20px;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>İSMAİL SAMURKAŞ</h1>
+        </header>
+
+        <div class="profile">
+            <div class="profile-image">
+                <img src="profil_resmi.jpg" alt="Profil Resmi">
+            </div>
+            <div class="contact-info">
+                <h2>İletişim Bilgileri</h2>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <span>ismailismailsamurkas@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Telefon</strong>
+                    <span>+90 5510729559</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Adres</strong>
+                    <span>Yenikent mah. İsmet İnönü cad. Hınıs/Erzurum, Türkiye</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/ismail_samurkas" target="_blank">LinkedIn</a>
+                    <a href="https://instagram.com/ismail_samurkas" target="_blank">Instagram</a>
+                    <a href="https://github.com/ismail_samurkas" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Öz Geçmiş</h2>
+            <p>
+                Ben İsmail SAMURKAŞ. 2001 yılında Muş'ta doğdum. İlk ve orta öğretimimi
+                Muş'ta tamamladım. Karabük Üniversitesi Bilgisayar Mühendisliği bölümünde öğrenim görüyorum.
+                2021 yılında 6 aylık bir süre boyunca Ferkan Üretim Fabrikasında Pres Makinesi Operatörü olarak
+                çalıştım. 2023 yılından itibaren Evrenos Teknoloji bünyesinde çalışmaktayım. Teknolojiye ve bilime son derece ilgili
+                biriyim. Çözüm odaklılık, iş yaşamında iletişim, çeviklik, strateji geliştirme ve ekip çalışması konularında kendime son derece
+                güveniyorum.
+            </p>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <div class="section">
+                    <h2>Eğitim</h2>
+                    <p><strong>Karabük Üniversitesi</strong><br>
+                    Bilgisayar Mühendisliği (2021 - Devam Ediyor)</p>
+                </div>
+
+                <div class="section">
+                    <h2>Teknik Beceriler</h2>
+                    <ul>
+                        <li>Python - Orta seviye</li>
+                        <li>JAVA - Orta seviye</li>
+                        <li>C - İleri seviye</li>
+                        <li>Git & GitHub</li>
+                        <li>MS Office Programları</li>
+                        <li>Görüntü işleme</li>
+                        <li>Solidworks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="section">
+                    <h2>İş Deneyimi</h2>
+                    <p><strong>EVRENOS TEKNOLOJİ</strong><br>
+                    Arayüz Geliştirici (2024-2025)</p>
+                    <ul>
+                        <li>Qt Designer kullanarak modern web uygulamaları geliştirme</li>
+                    </ul>
+
+                    <p><strong>FERKAN AŞ.</strong><br>
+                    Pres Operatörü (2021-2023)</p>
+                    <ul>
+                        <li>Üretim süreçlerinin optimizasyonu</li>
+                        <li>Kalite kontrol süreçlerine katkı</li>
+                        <li>Vardiya yönetimi</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Yabancı Diller</h2>
+                    <ul>
+                        <li>İngilizce - B2</li>
+                        <li>Türkçe - Ana dil</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Gönüllü Çalışmalar ve İlgi Alanları</h2>
+            <ul>
+                <li>Damla Gönüllülük Derneği - Aktif Üye</li>
+                <li>Robotik Kodlama Gönüllü Eğitmenlik</li>
+                <li>Robotik ve Yapay Zeka Projeleri Geliştirme</li>
+                <li>Fotoğrafçılık</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Referanslar</h2>
+            <p>Ferkan AŞ İnsan Kaynakları Müdürü</p>
+        </div>
+    </div>
+</body>
+</html>
